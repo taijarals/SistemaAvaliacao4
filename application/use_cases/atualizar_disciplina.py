@@ -18,3 +18,5 @@ class AtualizarDisciplina:
             curso=curso,
             dia=dia
         )
+
+        self.repository.atualizar(disciplina_atualizada)
