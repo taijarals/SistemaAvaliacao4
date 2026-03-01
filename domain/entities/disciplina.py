@@ -4,6 +4,6 @@ class Disciplina:
             raise ValueError("Nome é obrigatório")
 
         self.id = id
-        self.nome = nome_disciplina
-        self.curso = nome_curso
-        self.dia = dia_aula
+        self.nome = nome
+        self.curso = curso
+        self.dia = dia
