@@ -9,9 +9,11 @@ from infrastructure.repositories.disciplina_repository_impl import SupabaseDisci
 from application.use_cases.criar_disciplina import CriarDisciplina
 from application.use_cases.listar_disciplinas import ListarDisciplinas
 from application.use_cases.excluir_disciplina import ExcluirDisciplina
+from application.use_cases.atualizar_disciplina import AtualizarDisciplina
 
 # Presentation
 from presentation.pages.disciplinas_page import render_disciplinas_page
+
 
 
 def main():
