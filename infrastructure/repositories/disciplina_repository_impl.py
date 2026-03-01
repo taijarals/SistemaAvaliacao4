@@ -10,9 +10,9 @@ class SupabaseDisciplinaRepository:
 
     def salvar(self, disciplina: Disciplina):
         self.supabase.table(self.table).insert({
-            "nome_disciplina": disciplina.nome,
-            "nome_curso": disciplina.curso,
-            "dia_aula": disciplina.dia
+            "nome": disciplina.nome,
+            "curso": disciplina.curso,
+            "dia": disciplina.dia
         }).execute()
 
     def listar(self):
@@ -23,9 +23,9 @@ class SupabaseDisciplinaRepository:
             disciplinas.append(
                 Disciplina(
                     id=item["id"],
-                    nome=item["nome_disciplina"],
-                    curso=item["nome_curso"],
-                    dia=item["dia_aula"]
+                    nome=item["nome"],
+                    curso=item["curso"],
+                    dia=item["dia"]
                 )
             )
         return disciplinas
@@ -44,9 +44,9 @@ class SupabaseDisciplinaRepository:
 
         return Disciplina(
             id=item["id"],
-            nome=item["nome_disciplina"],
-            curso=item["nome_curso"],
-            dia=item["dia_aula"]
+            nome=item["nome"],
+            curso=item["curso"],
+            dia=item["dia"]
         )
 
     def excluir(self, disciplina_id):
@@ -58,9 +58,9 @@ class SupabaseDisciplinaRepository:
     def atualizar(self, disciplina: Disciplina):
         self.supabase.table(self.table)\
             .update({
-                "nome_disciplina": disciplina.nome,
-                "nome_curso": disciplina.curso,
-                "dia_aula": disciplina.dia
+                "nome": disciplina.nome,
+                "curso": disciplina.curso,
+                "dia": disciplina.dia
             })\
             .eq("id", disciplina.id)\
             .execute()
