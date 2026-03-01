@@ -1,3 +1,5 @@
+from domain.entities.disciplina import Disciplina
+
 class ListarDisciplinas:
 
     def __init__(self, repository):
