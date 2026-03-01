@@ -33,7 +33,8 @@ def main():
     render_disciplinas_page(
         criar_use_case=criar_uc,
         listar_use_case=listar_uc,
-        excluir_use_case=excluir_uc
+        excluir_use_case=excluir_uc,
+        atualizar_use_case=atualizar_uc
     )
 
 
