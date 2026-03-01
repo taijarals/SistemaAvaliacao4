@@ -26,11 +26,11 @@ def render_disciplinas_page(
     disciplinas = listar_use_case.execute()
 
     for disciplina in disciplinas:
-        with st.expander(disciplina["nome_disciplina"]):
+        with st.expander(disciplina.nome_disciplina):
 
-            if st.button("Excluir", key=f"del_{disciplina['id']}"):
+            if st.button("Excluir", key=f"del_{disciplina.id}"):
                 try:
-                    excluir_use_case.execute(disciplina["id"])
+                    excluir_use_case.execute(disciplina.id)
                     st.success("Excluída!")
                     st.rerun()
                 except Exception as e:
