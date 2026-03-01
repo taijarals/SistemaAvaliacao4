@@ -16,9 +16,10 @@ class SupabaseDisciplinaRepository:
         }).execute()
 
     def listar(self):
-        response = self.supabase.table(self.table).select("*").execute()
+        response = self.supabase.table("disciplinas").select("*").execute()
 
         disciplinas = []
+
         for item in response.data:
             disciplinas.append(
                 Disciplina(
@@ -28,6 +29,7 @@ class SupabaseDisciplinaRepository:
                     dia=item["dia_aula"]
                 )
             )
+
         return disciplinas
 
     def buscar_por_id(self, disciplina_id):
