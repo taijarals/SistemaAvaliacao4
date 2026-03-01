@@ -25,6 +25,7 @@ def main():
     criar_uc = CriarDisciplina(repo)
     listar_uc = ListarDisciplinas(repo)
     excluir_uc = ExcluirDisciplina(repo)
+    atualizar_uc = AtualizarDisciplina(repo)
 
     # ==========================
     # RENDER PAGE
